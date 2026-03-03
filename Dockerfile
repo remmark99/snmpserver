@@ -10,6 +10,8 @@ RUN useradd -m appuser
 USER appuser
 
 ENV LISTEN_HOST=0.0.0.0
-ENV LISTEN_PORT=162
+ENV LISTEN_PORT=1162
+ENV V3_USERS="test:SHA:qwe12345:AES:qwe12345"
+ENV DEBUG_SNMP=0
 
-CMD ["python", "snmpserv.py"]
+CMD ["python", "-u", "snmpserv.py"]
