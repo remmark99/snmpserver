@@ -6,7 +6,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY snmpserv.py .
 
-# Не-root юзер
 RUN useradd -m appuser
 USER appuser
 
